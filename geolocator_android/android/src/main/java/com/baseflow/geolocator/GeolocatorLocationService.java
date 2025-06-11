@@ -84,10 +84,11 @@ public class GeolocatorLocationService extends Service {
   }
 
   public boolean canStopLocationService(boolean cancellationRequested) {
-    if (cancellationRequested) {
-      return listenerCount == 1;
-    }
-    return connectedEngines == 0;
+    return true;
+    // if (cancellationRequested) {
+    //   return listenerCount == 1;
+    // }
+    // return connectedEngines == 0;
   }
 
   public void flutterEngineConnected() {
